@@ -3299,22 +3299,25 @@ var CardData = /*#__PURE__*/function (_HTMLElement) {
     _classCallCheck(this, CardData);
 
     _this = _super.call(this);
+    _this.shadowDOM = _this.attachShadow({
+      mode: "open"
+    });
     axios__WEBPACK_IMPORTED_MODULE_0__["default"].get("https://pokeapi.co/api/v2/pokemon/bulbasaur").then(function (response) {
       var pokemon = response;
       console.log(pokemon);
+      _this._pokemon = pokemon;
+
+      _this.render();
     })["catch"](function (response) {
       console.log("gagal");
     });
-
-    _this.render();
-
     return _this;
   }
 
   _createClass(CardData, [{
     key: "render",
     value: function render() {
-      this.innerHTML = "<h1>".concat(pokemon.data.name, "</h1>");
+      this.shadowDOM.innerHTML = "<h1>".concat(this._pokemon.data.name, "</h1>");
     }
   }]);
 
