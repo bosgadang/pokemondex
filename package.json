@@ -1,0 +1,26 @@
+{
+    "name": "pokedex",
+    "version": "1.0.0",
+    "description": "",
+    "private": true,
+    "scripts": {
+      "build": "webpack"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@babel/core": "^7.19.3",
+      "@babel/preset-env": "^7.19.3",
+      "babel-loader": "^8.2.5",
+      "bootstrap": "^5.2.2",
+      "css-loader": "^6.7.1",
+      "style-loader": "^3.3.1",
+      "webpack": "^5.74.0",
+      "webpack-cli": "^4.10.0"
+    },
+    "dependencies": {
+      "axios": "^1.0.0",
+      "jquery": "^3.6.1",
+      "moment": "^2.29.4"
+    }
+  }
